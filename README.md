@@ -1,4 +1,4 @@
-# <u>Tripadvisor Hotel Reviews Sentiment Predictions</u>
+# <u>Trip Advisor Hotel Reviews Sentiment Predictions</u>
 
 
 
@@ -40,3 +40,41 @@ This application is based on a sentiment analysis model created using the [Trip 
 - Serializing the data object
 - Building the web application
 - Model Deployment
+
+
+
+## Performance results
+
+- Confusion matrix for Logistic Regression Classifier
+
+![CF_logReg](F:\EndToEnd_Projects\Hotel_Reviews\Model_images\CF_logReg.png)
+
+- Precision and F1-Score for Logistic Regression Classifier
+
+  |      | Precision | Recall | F1-Score |
+  | ---- | :-------- | ------ | -------- |
+  | 1    | 0.78      | 0.64   | 0.70     |
+  | 2    | 0.46      | 0.43   | 0.44     |
+  | 3    | 0.40      | 0.23   | 0.29     |
+  | 4    | 0.55      | 0.50   | 0.52     |
+  | 5    | 0.70      | 0.84   | 0.77     |
+
+  
+
+
+
+- Confusion Matrix for Random Forrest Classifier
+
+  ![CF_RF](F:\EndToEnd_Projects\Hotel_Reviews\Model_images\CF_RF.png)
+
+- Precision and F1-Score for Random Forrest Classifier
+
+  |      | Precision | Recall | F1-Score |
+  | ---- | :-------- | ------ | -------- |
+  | 1    | 0.62      | 0.65   | 0.64     |
+  | 2    | 0.36      | 0.24   | 0.29     |
+  | 3    | 0.35      | 0.23   | 0.28     |
+  | 4    | 0.47      | 0.40   | 0.43     |
+  | 5    | 0.63      | 0.78   | 0.70     |
+
+  
