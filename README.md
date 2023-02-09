@@ -47,7 +47,7 @@ This application is based on a sentiment analysis model created using the [Trip 
 
 - Confusion matrix for Logistic Regression Classifier
 
-![CF_logReg](F:\EndToEnd_Projects\Hotel_Reviews\Model_images\CF_logReg.png)
+![CF_logReg](./Model_images/CF_logReg.png)
 
 - Precision, Recall, and F1-Score for Logistic Regression Classifier
 
@@ -63,7 +63,7 @@ This application is based on a sentiment analysis model created using the [Trip 
 
 - Confusion Matrix for Random Forrest Classifier
 
-  ![CF_RF](F:\EndToEnd_Projects\Hotel_Reviews\Model_images\CF_RF.png)
+  ![CF_RF](./Model_images/CF_RF.png)
 
 - Precision, Recall, and F1-Score for Random Forrest Classifier
 
@@ -91,7 +91,7 @@ This application is based on a sentiment analysis model created using the [Trip 
 
 - The model is more accurate in predicting the extreme ends of ratings which are 1 and 5 and is less accurate when the rest if the rating. This behaviour understandable since the ratings of 2, 3, and 4 are very subjective, and even a human might struggle to identify which is which.
 
-- ![](F:\EndToEnd_Projects\Hotel_Reviews\Model_images\Count of reveiws for each Rating.png)
+- ![Count of reveiws for each Rating](./Model_images/Count of reveiws for each Rating.png)
 
   The above image shows that there is a definite data imbalance for the ratings of 1, 2, and 3 when compared with the rest of the ratings. Therefore having more data which represent the ratings of 1, 2, and 3 would have definitely increased the overall performance of the model.
 
