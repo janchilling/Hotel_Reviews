@@ -1,0 +1,10 @@
+Flask
+sklearn
+matplotlib
+numpy
+pandas
+seaborn
+nltk
+regex
+wordcloud
+imblearn
