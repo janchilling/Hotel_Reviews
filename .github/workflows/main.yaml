@@ -9,10 +9,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: heroku/actions/deploy # This is the action
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Login to Heroku Container Registry
+        uses: docker/login-action@v1
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
-          dockerfile_directory : ./
-          dockerfile_name: Dockerfile
+          username: ${{ secrets.HEROKU_USERNAME }}
+          password: ${{ secrets.HEROKU_API_KEY }}
+      
+      - name: Build and push Docker image
+        uses: heroku/actions/build@v4
+        with:
+          app-name: ${{ secrets.HEROKU_APP_NAME }}
+          dockerfile: Dockerfile
+          context: ./
+      
+      - name: Release to Heroku
+        uses: heroku/actions/deploy@v4
+        with:
+          app-name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku-api-key: ${{ secrets.HEROKU_API_KEY }}
