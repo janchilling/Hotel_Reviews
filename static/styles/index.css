@@ -1,0 +1,102 @@
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    background-color: #f2f2f2;
+    background-image: url(../images/BackgroundImage.jpg);
+}
+
+.MainContainer{
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    border: none;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ababae;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3b71e8;
+    color: rgb(254, 252, 252);
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #72a839;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.formcontainer {
+    text-align: left;
+    margin: 24px 32px 12px;
+}
+
+.container {
+    padding: 16px 0;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+span.psw {
+    float: right;
+    padding-top: 0;
+    padding-right: 15px;
+}
+
+.predictionContainer{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.repolink{
+    font-size:15px;
+    margin-top: 20px;
+}
+
+/* Change styles for span on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}

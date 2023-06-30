@@ -31,9 +31,8 @@ def logreg_predict_api():
 def predict():
     data = [str(logreg_data) for logreg_data in request.form.values()]
     final_input = logreg_transformer.transform(pd.Series(data))
-    print(final_input)
     output = logreg_model.predict(final_input)
-    return render_template("index.html", prediction_text = "The predictive rating for the Review out of a score of 5 is {}". format(output))
+    return render_template("index.html", prediction_text = "The predictive rating for the Review out of a score of 5 is {}". format(output[0]))
 
 
 
