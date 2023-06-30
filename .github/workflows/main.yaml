@@ -1,26 +1,18 @@
-name: Heroku 
+name: Deploy
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    # Important: This sets up your GITHUB_WORKSPACE environment variable
-    - uses: actions/checkout@v2
-
-    - name: Lint Ansible Playbook
-      # replace "master" with any valid ref
-      uses: ansible/ansible-lint-action@master
-      with:
-        # [required]
-        # Paths to ansible files (i.e., playbooks, tasks, handlers etc..)
-        # or valid Ansible directories according to the Ansible role
-        # directory structure.
-        # If you want to lint multiple ansible files, use the following syntax
-        # targets: |
-        #   playbook_1.yml
-        #   playbook_2.yml
-        targets: wordpress-nginx/site.yml
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.14 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "YOUR APP's NAME" #Must be unique in Heroku
+          heroku_email: "YOUR EMAIL"
+          usedocker: true
