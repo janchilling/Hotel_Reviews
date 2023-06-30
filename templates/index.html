@@ -8,12 +8,12 @@
   <body>
     <div class="MainContainer">
     <form action="{{ url_for('predict') }}" method="post">
-      <h1>Prediction Form</h1>
+      <h1>Sentiment Predictor Form</h1>
       <div class="formcontainer">
       <hr/>
       <div class="container">
         <label for="uname"><strong>Review</strong></label>
-        <input type="text" placeholder="Enter the Review text" name="uname" required>
+        <input type="text" placeholder="Enter your feelings about a hotel you stayed in or a vacation." name="uname" required>
       </div>
       <button type="submit">Get Predicted sentiment score</button>
       
@@ -22,6 +22,17 @@
     <div class = "predictionContainer">
     {{prediction_text}}
     </div>
+
+    <div class = "instructions">
+      <h3>Instructions</h3>
+      <ul>
+        <li>Predicted Sentiment score for your input will be given on a scale of 1 to 5, 
+          where 1 being the most negative and 5 being the most positive</li>
+        <li>Think of the score that you would give to the entered text, and compare with
+          the predicted sentiment of the machine learning model.</li>
+      </ul>
+      </div>
+    
     <div class = "repolink">
       <a href = "https://github.com/janchilling/Hotel_Reviews">GitHub Repository Link</a>
     </div>

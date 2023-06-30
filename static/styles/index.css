@@ -14,7 +14,7 @@ html, body {
     width: 60%;
     margin-top: auto;
     margin-bottom: auto;
-    height: 60%;
+    height: 72%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -91,6 +91,11 @@ span.psw {
 .repolink{
     font-size:15px;
     margin-top: 20px;
+}
+
+.instructions{
+    font-size:15px;
+    /* margin-top: 20px; */
 }
 
 /* Change styles for span on extra small screens */

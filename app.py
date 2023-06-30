@@ -15,15 +15,15 @@ def home():
 
 
 
-@app.route('/logreg_predict_api', methods = ['POST'])
-def logreg_predict_api():
-    logreg_data = request.json['logreg_data']
-    print(logreg_data)
-    print(pd.Series(logreg_data.values()))
-    new_logreg_data = logreg_transformer.transform(pd.Series(logreg_data.values()))
-    output = logreg_model.predict(new_logreg_data)
-    print(output[0])
-    return jsonify(str(output[0]))
+# @app.route('/logreg_predict_api', methods = ['POST'])
+# def logreg_predict_api():
+#     logreg_data = request.json['logreg_data']
+#     print(logreg_data)
+#     print(pd.Series(logreg_data.values()))
+#     new_logreg_data = logreg_transformer.transform(pd.Series(logreg_data.values()))
+#     output = logreg_model.predict(new_logreg_data)
+#     print(output[0])
+#     return jsonify(str(output[0]))
 
 
 
